@@ -1,0 +1,51 @@
+
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 20px;
+}
+
+.card {
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease;
+}
+.card:hover {
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.text {
+    width: 50%;
+}
+
+.media {
+    width: 50%;
+    padding-top: 20px;
+}
+
+.video {
+    padding-top: 20px;
+    width: 50%;
+    height: 250px;
+}
+.idcTitle {
+    padding-top: 20px;
+    font-size: 20px;
+}
+

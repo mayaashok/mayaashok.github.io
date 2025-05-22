@@ -1,6 +1,7 @@
+import { Route, Routes, Navigate } from "react-router-dom";
 import Home from './Home.js';
 import Resume from './Resume.js';
-import { Route, Routes, Navigate } from "react-router-dom";
+import Projects from './Projects.js';
 
 import './App.css';
 import Navbar from './Navbar.js';
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="/home" element={<Home/>} />
         <Route path="/resume" element={<Resume/>} />
+        <Route path="/projects" element={<Projects/>} />
       </Routes>
     </div>
   );

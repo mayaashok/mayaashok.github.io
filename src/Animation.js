@@ -5,8 +5,8 @@ function AnimatedSVG() {
         display: 'flex', 
         justifyContent: 'center',   // center horizontally on page
         alignItems: 'center',       // center vertically on page (if parent has height)
-        height: '100vh',            // fill viewport height to center vertically
-        width: '100%' 
+        height: '500px',            // fill viewport height to center vertically
+        width: '100%',
       }}
     >
       <div

@@ -1,6 +1,5 @@
-// import Image from 'react-bootstrap/Image';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import myResume from './myresume.png';
+import myResume from './media/myresume.png';
 
 function Resume() {
   return (
@@ -10,7 +9,7 @@ function Resume() {
         src={myResume}
         alt={'my resume'}
         style={{
-          width: '800px',
+          width: '80%',
           padding: '50px'
         }}
       />
