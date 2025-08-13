@@ -24,28 +24,46 @@
 
 .cardBody {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column;
+    align-items: center; */
+    justify-content: space-between;
+    gap: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
+.column1 {
+    flex: 1;
+    padding-left: 30px;
+}
+.column2 {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.title {
+    padding-top: 15px;
+    font-size: 20px;
+}
+
 .text {
-    width: 50%;
+    /* width: 50%; */
+    padding: 15px;
+    text-align: left;
 }
 
 .media {
-    width: 50%;
-    padding-top: 20px;
+    /* width: 50%;
+    padding-top: 20px; */
+    padding: 15px;
+    width: 90%;
 }
 
 .video {
-    padding-top: 20px;
+    padding: 15px;
+    width: 90%;
+    /* padding-top: 20px;
     width: 50%;
-    height: 250px;
-}
-.idcTitle {
-    padding-top: 20px;
-    font-size: 20px;
+    height: 250px; */
 }
 
