@@ -1,3 +1,5 @@
+import './Animation.css';
+
 function AnimatedSVG() {
     return (
         <div 
@@ -11,22 +13,22 @@ function AnimatedSVG() {
     >
       <div
         style={{
-          width: '10000px',
-          height: '600px',          // crop height here
+          width: '100%',
           overflow: 'hidden',
           display: 'flex',
           justifyContent: 'center', // center iframe horizontally in crop box
-          alignItems: 'center',     // center iframe vertically in crop box,
+          alignItems: 'flex-start',     // center iframe vertically in crop box,
         }}
+        className="animated-crop"
       >
         <iframe
           src="/homeAnimation.svg"
           style={{
-            width: '10000px',
-            height: '800px',         // iframe bigger than crop box to crop bottom
+            width: '100%',
+            minHeight: '1000px',         // iframe bigger than crop box to crop bottom
             border: 'none',
-            transform: 'translateY(250px)',  // move iframe up inside crop box
           }}
+          className="animated-svg"
           title="Animated SVG"
         />
       </div>
@@ -35,3 +37,4 @@ function AnimatedSVG() {
   }
 
 export default AnimatedSVG;
+

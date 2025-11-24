@@ -127,7 +127,7 @@ function Projects() {
             <Collapse in={!!expanded[2]} timeout="auto" unmountOnExit>
                 <CardMedia sx={{ height: 200, backgroundColor: "#263238" }} component="video" src={demo385} title="fruit ninja demo video" controls/>
                 <CardContent>
-                    <Typography gutterBottom variant="h7" component="div">FPGA Arcade Game: Fruit Ninjae</Typography>
+                    <Typography gutterBottom variant="h7" component="div">FPGA Arcade Game: Fruit Ninja</Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                         For our Digital Systems Lab final project, my partner and I designed the fruit ninja game 
                         on a system-on-chip Field Programmable Gate Array (FPGA)

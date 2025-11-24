@@ -1,0 +1,30 @@
+.animated-svg {
+  transform: translateY(100px);
+}
+.animated-crop {
+  height: 600px;
+}
+  
+ 
+@media (max-width: 800px) {
+  .animated-svg {
+    transform: translateY(-3%);
+  }
+}
+@media (max-width: 600px) {
+    .animated-svg {
+      transform: translateY(-15%);
+    }
+}
+
+@media (max-width: 800px) {
+    .animated-crop {
+      height: 550px;
+    }
+}
+  
+@media (max-width: 600px) {
+    .animated-crop {
+      height: 400px; 
+    }
+}
