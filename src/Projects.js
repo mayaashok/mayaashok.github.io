@@ -6,6 +6,9 @@ import disscoVid from './media/gui.mp4';
 import demo385 from './media/demo385.mp4';
 import report385 from './media/report385.pdf';
 
+import plot441 from './media/plot441.png';
+import report441 from './media/report441.pdf';
+
 import robot from './media/robot.png';
 import report198 from './media/report198.pdf';
 import journal198 from './media/journal198.pdf';
@@ -29,6 +32,7 @@ import pilotCity from './media/pilotcity.jpeg';
 
 import './Projects.css';
 import * as React from 'react';
+import { useEffect, useRef } from "react";
 
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
@@ -36,6 +40,7 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
@@ -69,6 +74,30 @@ const ExpandMore = styled((props) => {
     }),
   }));
 
+  function AsciinemaPlayer() {
+    const containerRef = useRef(null);
+  
+    useEffect(() => {
+      const container = containerRef.current; // copy ref to local variable
+      if (!container) return;
+  
+      const script = document.createElement("script");
+      script.src = "https://asciinema.org/a/Xhx4MwTwev8eHmMI8cEDKNbMq.js";
+      script.id = "asciicast-Xhx4MwTwev8eHmMI8cEDKNbMq";
+      script.async = true;
+  
+      container.innerHTML = ""; // clear previous player
+      container.appendChild(script);
+  
+      return () => {
+        if (container) container.innerHTML = ""; // use local variable here
+      };
+    }, []);
+  
+    return <div ref={containerRef} style={{ width: "58%", height: "100%" }} />;
+  }
+  
+  
 function Projects() {
   const [expanded, setExpanded] = React.useState({});
   const handleExpandClick = (id) => { setExpanded(prev => ({ ...prev, [id]: !prev[id] })); };
@@ -91,7 +120,7 @@ function Projects() {
                 <CardContent>
                     <Typography gutterBottom variant="h7" component="div">DISSCO Software</Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        I assisted with programming the new graphical user interface using C++ and the QT framework 
+                        I am currently programming the new graphical user interface using C++ and the QT framework 
                         (upgrading from the old GTK framework) for Dr. Sever Tipei’s project DISSCO (version 2.2.0). When finalized, the software
                         with the new GUI will be utilized in Dr. Tipei's class Introduction to Computer Music (Music 448). I received the 2025 Fiddler
                         Innovation Undergraduate Student Fellowship Award for project contributions.
@@ -129,10 +158,13 @@ function Projects() {
                 <CardContent>
                     <Typography gutterBottom variant="h7" component="div">FPGA Arcade Game: Fruit Ninja</Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        For our Digital Systems Lab final project, my partner and I designed the fruit ninja game 
-                        on a system-on-chip Field Programmable Gate Array (FPGA)
-                        that uses a Video Graphic Array screen output and USB mouse input. I utilized SystemVerilog
-                        and C to program the game logic and mouse data on the FPGA.
+                        For our Digital Systems Lab final project, my partner and I designed and implemented a Fruit Ninja-style game on a Spartan-7
+                        FPGA using a system-on-chip architecture. The system drives a VGA display for graphics output and accepts a USB mouse input
+                        via a SPI interface.
+                        The design integrates a MicroBlaze soft processor with custom hardware modules written in SystemVerilog. We implemented a SPI
+                        interface in C to communicate mouse position data through a MAX3421E USB controller. We also implemented a FSM-driven game
+                        engine in hardware. Game assets were stored in BRAM, with real-time sprite rendering and collision detection for fruit slicing
+                        and bomb hits. A linear feedback shift register (LFSR) was used to randomize fruit spawn positions.
                     </Typography>
                     <br></br>
                     <GitHubIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
@@ -156,11 +188,25 @@ function Projects() {
                 }
             />
             <Collapse in={!!expanded[3]} timeout="auto" unmountOnExit>
+                <Box sx={{ height: "400px", backgroundColor: "#282a36", display: "flex", justifyContent: "center"}}>
+                    <AsciinemaPlayer />
+                </Box>
+                <br></br>
                 <CardContent>
                     <Typography gutterBottom variant="h7" component="div">Custom UNIX OS: Triple Byte OS</Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        in progress ...
+                        For our Operating Systems semester machine project, my group and I built a Unix-like OS in C for a 64-bit RISC-V system running
+                        on QEMU to emulate the hardware platform. We implemented kernel subsystems including UART, RTC, and VIORNG serial device drivers, a read/write
+                        filesystem backed by a VIOBLK storage device with an intermediate LRU cache, and ELF program loading. The kernel supports preemptive multitasking
+                        via threads, processes, scheduling, context switching, and a system call interface. We implemented SV39 virtual memory with paging, process forking,
+                        pipes for inter-process communication, and a user-level shell capable of launching and managing multiple user programs.
                     </Typography>
+                    <br></br>
+                    <GitHubIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
+                    <Link href="https://github.com/illinois-ece391/fa25_ece391_group_30" color="success.main" sx={{ fontSize: '0.9rem'}}>MP3 Code (Private)</Link>
+                    <br></br>
+                    <GitHubIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
+                    <Link href="https://github.com/illinois-ece391/fa25_ece391_mayaa4" color="success.main" sx={{ fontSize: '0.9rem'}}>MP1/2 Code (Private)</Link>
                 </CardContent>
             </Collapse>
         </Card>
@@ -177,11 +223,24 @@ function Projects() {
                 }
             />
             <Collapse in={!!expanded[4]} timeout="auto" unmountOnExit>
+                <CardMedia sx={{ width: 400, height: 300, margin: "0 auto", display: "block" }} image={plot441} title="pca embeddings plot"/>
                 <CardContent>
-                    <Typography gutterBottom variant="h7" component="div">Multi-Sport Event Embedding Space</Typography>
+                    <Typography gutterBottom variant="h7" component="div">Zero-Shot Sports Event Categorization</Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        in progress ...
+                        For our Applied ML final project, my group and I trained a Multi-Layer Perceptron model to
+                        classify unseen sports events into one of five categories (Offensive, Defensive, Error, Transition, Neutral)
+                        to help individuals become more familiar with new sports lingo in various settings from watching to playing sports.
+                        We trained and tested Logistic Regression and Linear SVM models as baseline models for comparison. We used
+                        best single-run test accuracy as quantitative evidence for choosing the best model (MLP). We used PCA clustering
+                        and Nearest-Neighbors as qualitative evidence to show that our MLP model developed relationships between sports events 
+                        and categories. An interactive Gradio App was used for live zero-shot testing.
                     </Typography>
+                    <br></br>
+                    <GitHubIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
+                    <Link href="https://github.com/sebastian-chamorro/CS441_FINAL_PROJECT/tree/main" color="success.main" sx={{ fontSize: '0.9rem'}}>Code</Link>
+                    <br></br>
+                    <DescriptionRoundedIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></DescriptionRoundedIcon>
+                    <Link href={report441} color="success.main" sx={{ fontSize: '0.9rem'}}>Final Report</Link>
                 </CardContent>
             </Collapse>
         </Card>
@@ -198,7 +257,7 @@ function Projects() {
                 }
             />
             <Collapse in={!!expanded[5]} timeout="auto" unmountOnExit>
-                <CardMedia sx={{ width: 500, height: 300, margin: "0 auto", display: "block" }} image={robot} title="echo nav"/>
+                <CardMedia sx={{ width: 330, height: 200, margin: "0 auto", display: "block" }} image={robot} title="echo nav"/>
                 <CardContent>
                     <Typography gutterBottom variant="h7" component="div">Autonomous Robot: EchoNav</Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
