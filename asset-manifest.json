@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bbf8439c.css",
-    "main.js": "/static/js/main.02b27ff2.js",
+    "main.js": "/static/js/main.685b45f4.js",
     "static/js/453.195b869a.chunk.js": "/static/js/453.195b869a.chunk.js",
     "static/media/demo198.mp4": "/static/media/demo198.055c35190b0df2949ec3.mp4",
     "static/media/ncsa.jpg": "/static/media/ncsa.da8e2e0944b952230ed6.jpg",
@@ -17,19 +17,21 @@
     "static/media/gui.mp4": "/static/media/gui.7ac1081ecad12438f415.mp4",
     "static/media/cosmosReport.pdf": "/static/media/cosmosReport.2eaf550f65341d622045.pdf",
     "static/media/wcsTeam.png": "/static/media/wcsTeam.3bd91009a06bed536e57.png",
+    "static/media/report441.pdf": "/static/media/report441.b9daf877e4403a4d6f3e.pdf",
     "static/media/robot.png": "/static/media/robot.dcf010fbf8fda7705504.png",
     "static/media/report385.pdf": "/static/media/report385.7d489c8c2b64a21668b6.pdf",
     "static/media/idc.png": "/static/media/idc.6f07b44f33df19295b3a.png",
     "static/media/pneumonia.mp4": "/static/media/pneumonia.7e2e0d2d69ae4ab92fdb.mp4",
+    "static/media/plot441.png": "/static/media/plot441.b237c8dcd6a8fe70d008.png",
     "static/media/figma.png": "/static/media/figma.048a41b25e4d828e59c3.png",
     "static/media/mlogo.svg": "/static/media/mlogo.c1bebc4eff9ee2916582bc8f82ee935d.svg",
     "index.html": "/index.html",
     "main.bbf8439c.css.map": "/static/css/main.bbf8439c.css.map",
-    "main.02b27ff2.js.map": "/static/js/main.02b27ff2.js.map",
+    "main.685b45f4.js.map": "/static/js/main.685b45f4.js.map",
     "453.195b869a.chunk.js.map": "/static/js/453.195b869a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bbf8439c.css",
-    "static/js/main.02b27ff2.js"
+    "static/js/main.685b45f4.js"
   ]
 }
