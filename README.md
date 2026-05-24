@@ -34,6 +34,6 @@ branch of the repo.
 
 ### `git add .`
 ### `git commit -m "Commit Message"`
-### `git push origin master`
+### `git push origin main`
 
-Commits new changes made to master branch.
+Commits new changes made to main branch.
