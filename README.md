@@ -1,4 +1,5 @@
 # Running A React App Website
+<img height="60" alt="website" src="https://github.com/user-attachments/assets/fdf20c06-3fb0-4d03-87f4-99e5cabe42f9" />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -37,3 +38,5 @@ branch of the repo.
 ### `git push origin main`
 
 Commits new changes made to main branch.
+
+<a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by wanicon - Flaticon</a>
