@@ -1,7 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import ncsaAward from './media/ncsa.jpg';
-import disscoVid from './media/gui.mp4';
 
 import demo385 from './media/demo385.mp4';
 import report385 from './media/report385.pdf';
@@ -14,12 +12,17 @@ import report198 from './media/report198.pdf';
 import journal198 from './media/journal198.pdf';
 import demo198 from './media/demo198.mp4';
 
+import rank438 from './media/rank438.png';
+
 import weceLogo from './media/wece.png';
 import wece from './media/weceEOH.png';
 import wcsLogo from './media/wcs-logo.png';
 import wcs from './media/wcsTeam.png';
 import idcLogo from './media/idc-logo.jpeg';
 import idc from './media/idc.png';
+import evLogo from './media/ev-logo.png';
+import irisLogo from './media/iris-logo.png';
+import gwcLogo from './media/gwc-logo.png';
 
 import aiSlides from './media/inspiritSlides.pdf'
 import inspiritVid from './media/pneumonia.mp4';
@@ -27,8 +30,6 @@ import inspiritVid from './media/pneumonia.mp4';
 import cosmosSlides from './media/cosmosSlides.pdf'
 import cosmosReport from './media/cosmosReport.pdf'
 
-import figma from './media/figma.png';
-import pilotCity from './media/pilotcity.jpeg';
 
 import './Projects.css';
 import * as React from 'react';
@@ -48,7 +49,6 @@ import Avatar from '@mui/material/Avatar';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Collapse from '@mui/material/Collapse';
 
-import QueueMusicRoundedIcon from '@mui/icons-material/QueueMusicRounded';
 import MemoryRoundedIcon from '@mui/icons-material/MemoryRounded';
 import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded';
 import DataExplorationOutlinedIcon from '@mui/icons-material/DataExplorationOutlined';
@@ -56,6 +56,7 @@ import SensorsIcon from '@mui/icons-material/Sensors';
 import GroupsRoundedIcon from '@mui/icons-material/GroupsRounded';
 import MonitorHeartOutlinedIcon from '@mui/icons-material/MonitorHeartOutlined';
 import PrecisionManufacturingOutlinedIcon from '@mui/icons-material/PrecisionManufacturingOutlined';
+import WifiIcon from '@mui/icons-material/Wifi';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DescriptionRoundedIcon from '@mui/icons-material/DescriptionRounded';
@@ -106,72 +107,27 @@ function Projects() {
     <div class="page">
         <Card sx={{ width: '100%', maxWidth: 700 }}>
             <CardHeader 
-                avatar={ <QueueMusicRoundedIcon aria-label="music"></QueueMusicRoundedIcon>}
-                title="UIUC NCSA Research Project"
+                avatar={ <WifiIcon aria-label="network"></WifiIcon>}
+                title="UIUC ECE 438: TCP-like Communication Protocol"
                 sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
                 action={
-                    <ExpandMore expand={!!expanded[1]} onClick={()=>handleExpandClick(1)} aria-expanded={!!expanded[1]} aria-label="show more">
+                    <ExpandMore expand={!!expanded[15]} onClick={()=>handleExpandClick(15)} aria-expanded={!!expanded[15]} aria-label="show more">
                         <ExpandMoreIcon/>
                     </ExpandMore>
                 }
             />
-            <Collapse in={!!expanded[1]} timeout="auto" unmountOnExit>
-                <CardMedia sx={{ height: 200 }} image={ncsaAward} title="ncsa fiddler award ceremony"/>
+            <Collapse in={!!expanded[15]} timeout="auto" unmountOnExit>
+                <CardMedia sx={{ width: 360, height: 200, margin: "0 auto", display: "block" }} image={rank438} title="438 mp3 leaderboard"/>
                 <CardContent>
-                    <Typography gutterBottom variant="h7" component="div">DISSCO Software</Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        I am currently programming the new graphical user interface using C++ and the QT framework 
-                        (upgrading from the old GTK framework) for Dr. Sever Tipei’s project DISSCO (version 2.2.0). When finalized, the software
-                        with the new GUI will be utilized in Dr. Tipei's class Introduction to Computer Music (Music 448). I received the 2025 Fiddler
-                        Innovation Undergraduate Student Fellowship Award for project contributions.
-                    </Typography>
-                    <br></br>
-                    <GitHubIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
-                    <Link href="https://github.com/passyur/DISSCO-2.2.0" color="success.main" sx={{ fontSize: '0.9rem'}}>DISSCO 2.2.0</Link>
-                    <br></br>
-                    <GitHubIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
-                    <Link href="https://github.com/tipei/DISSCO-2.1.0" color="success.main" sx={{ fontSize: '0.9rem'}}>DISSCO 2.1.0</Link>
-                    <br></br>
-                    <DescriptionRoundedIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></DescriptionRoundedIcon>
-                    <Link href="https://cmp.ischool.illinois.edu/software/dissco/index.php" color="success.main" sx={{ fontSize: '0.9rem'}}>DISSCO Manual</Link>
-                    <br></br>
-                    <VideocamRoundedIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></VideocamRoundedIcon>
-                    <Link href={disscoVid} color="success.main" sx={{ fontSize: '0.9rem'}}>QT GUI Demo (WIP)</Link>
-                </CardContent>
-            </Collapse>
-        </Card>
-
-
-        <Card sx={{ width: '100%', maxWidth: 700 }}>
-            <CardHeader 
-                avatar={ <MemoryRoundedIcon aria-label="fpga"></MemoryRoundedIcon>}
-                title="UIUC Digital Systems Laboratory (ECE 385) Final Project"
-                sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
-                action={
-                    <ExpandMore expand={!!expanded[2]} onClick={()=>handleExpandClick(2)} aria-expanded={!!expanded[2]} aria-label="show more">
-                        <ExpandMoreIcon/>
-                    </ExpandMore>
-                }
-            />
-            <Collapse in={!!expanded[2]} timeout="auto" unmountOnExit>
-                <CardMedia sx={{ height: 200, backgroundColor: "#263238" }} component="video" src={demo385} title="fruit ninja demo video" controls/>
-                <CardContent>
-                    <Typography gutterBottom variant="h7" component="div">FPGA Arcade Game: Fruit Ninja</Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        For our Digital Systems Lab final project, my partner and I designed and implemented a Fruit Ninja-style game on a Spartan-7
-                        FPGA using a system-on-chip architecture. The system drives a VGA display for graphics output and accepts a USB mouse input
-                        via a SPI interface.
-                        The design integrates a MicroBlaze soft processor with custom hardware modules written in SystemVerilog. We implemented a SPI
-                        interface in C to communicate mouse position data through a MAX3421E USB controller. We also implemented a FSM-driven game
-                        engine in hardware. Game assets were stored in BRAM, with real-time sprite rendering and collision detection for fruit slicing
-                        and bomb hits. A linear feedback shift register (LFSR) was used to randomize fruit spawn positions.
+                        Developed a reliable TCP-inspired transport protocol in C implementing connection establishment, sliding-window data transfer,
+                        congestion control, retransmission, and connection teardown. The project provided hands-on experience with transport-layer networking
+                        concepts including flow control, congestion control, and reliable communication, achieving 8.92 Mbps throughput on the course
+                        leaderboard as Team Espressos.
                     </Typography>
                     <br></br>
                     <GitHubIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
                     <Link href="#projects" color="success.main" sx={{ fontSize: '0.9rem'}}>Code</Link>
-                    <br></br>
-                    <DescriptionRoundedIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></DescriptionRoundedIcon>
-                    <Link href={report385} color="success.main" sx={{ fontSize: '0.9rem'}}>Final Report</Link>
                 </CardContent>
             </Collapse>
         </Card>
@@ -179,7 +135,7 @@ function Projects() {
         <Card sx={{ width: '100%', maxWidth: 700 }}>
             <CardHeader 
                 avatar={ <TerminalRoundedIcon aria-label="os"></TerminalRoundedIcon>}
-                title="UIUC Computer Systems Engineering (ECE 391) Semester Project"
+                title="UIUC ECE 391: RISC-V Operating System - Triple-Byte OS"
                 sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
                 action={
                     <ExpandMore expand={!!expanded[3]} onClick={()=>handleExpandClick(3)} aria-expanded={!!expanded[3]} aria-label="show more">
@@ -193,20 +149,14 @@ function Projects() {
                 </Box>
                 <br></br>
                 <CardContent>
-                    <Typography gutterBottom variant="h7" component="div">Custom UNIX OS: Triple Byte OS</Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        For our Operating Systems semester machine project, my group and I built a Unix-like OS in C for a 64-bit RISC-V system running
-                        on QEMU to emulate the hardware platform. We implemented kernel subsystems including UART, RTC, and VIORNG serial device drivers, a read/write
-                        filesystem backed by a VIOBLK storage device with an intermediate LRU cache, and ELF program loading. The kernel supports preemptive multitasking
-                        via threads, processes, scheduling, context switching, and a system call interface. We implemented SV39 virtual memory with paging, process forking,
-                        pipes for inter-process communication, and a user-level shell capable of launching and managing multiple user programs.
+                        Built a Unix-like operating system in C for a 64-bit RISC-V platform running on QEMU. Implemented core kernel functionality
+                        including process management, virtual memory, device drivers, file systems, inter-process communication, and a system call
+                        interface. The project provided hands-on experience with operating systems, computer architecture, and low-level systems programming.
                     </Typography>
                     <br></br>
                     <GitHubIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
-                    <Link href="https://github.com/illinois-ece391/fa25_ece391_group_30" color="success.main" sx={{ fontSize: '0.9rem'}}>MP3 Code (Private)</Link>
-                    <br></br>
-                    <GitHubIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
-                    <Link href="https://github.com/illinois-ece391/fa25_ece391_mayaa4" color="success.main" sx={{ fontSize: '0.9rem'}}>MP1/2 Code (Private)</Link>
+                    <Link href="#projects" color="success.main" sx={{ fontSize: '0.9rem'}}>Code</Link>
                 </CardContent>
             </Collapse>
         </Card>
@@ -214,7 +164,7 @@ function Projects() {
         <Card sx={{ width: '100%', maxWidth: 700 }}>
             <CardHeader 
                 avatar={ <DataExplorationOutlinedIcon aria-label="data"></DataExplorationOutlinedIcon>}
-                title="UIUC Applied Machine Learning (CS 441) Final Project"
+                title="UIUC CS 441: Machine Learning Event Classification"
                 sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
                 action={
                     <ExpandMore expand={!!expanded[4]} onClick={()=>handleExpandClick(4)} aria-expanded={!!expanded[4]} aria-label="show more">
@@ -223,17 +173,12 @@ function Projects() {
                 }
             />
             <Collapse in={!!expanded[4]} timeout="auto" unmountOnExit>
-                <CardMedia sx={{ width: 400, height: 300, margin: "0 auto", display: "block" }} image={plot441} title="pca embeddings plot"/>
+                <CardMedia sx={{ width: 220, height: 165, margin: "0 auto", display: "block" }} image={plot441} title="pca embeddings plot"/>
                 <CardContent>
-                    <Typography gutterBottom variant="h7" component="div">Zero-Shot Sports Event Categorization</Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        For our Applied ML final project, my group and I trained a Multi-Layer Perceptron model to
-                        classify unseen sports events into one of five categories (Offensive, Defensive, Error, Transition, Neutral)
-                        to help individuals become more familiar with new sports lingo in various settings from watching to playing sports.
-                        We trained and tested Logistic Regression and Linear SVM models as baseline models for comparison. We used
-                        best single-run test accuracy as quantitative evidence for choosing the best model (MLP). We used PCA clustering
-                        and Nearest-Neighbors as qualitative evidence to show that our MLP model developed relationships between sports events 
-                        and categories. An interactive Gradio App was used for live zero-shot testing.
+                        Developed a machine learning pipeline to classify sports events into five categories using natural language descriptions.
+                        Trained and evaluated Logistic Regression, Linear SVM, and Multi-Layer Perceptron models, selecting the MLP based on
+                        quantitative and qualitative performance metrics. Built an interactive Gradio application for live inference and model demonstration.
                     </Typography>
                     <br></br>
                     <GitHubIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
@@ -247,8 +192,38 @@ function Projects() {
 
         <Card sx={{ width: '100%', maxWidth: 700 }}>
             <CardHeader 
+                avatar={ <MemoryRoundedIcon aria-label="fpga"></MemoryRoundedIcon>}
+                title="UIUC ECE 385: FPGA Fruit Ninja Game"
+                sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
+                action={
+                    <ExpandMore expand={!!expanded[2]} onClick={()=>handleExpandClick(2)} aria-expanded={!!expanded[2]} aria-label="show more">
+                        <ExpandMoreIcon/>
+                    </ExpandMore>
+                }
+            />
+            <Collapse in={!!expanded[2]} timeout="auto" unmountOnExit>
+                <CardMedia sx={{ height: 200, backgroundColor: "#263238" }} component="video" src={demo385} title="fruit ninja demo video" controls/>
+                <CardContent>
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                        Designed and implemented a Fruit Ninja-inspired game on a Spartan-7 FPGA using a system-on-chip architecture. Integrated a
+                        MicroBlaze soft processor, custom SystemVerilog hardware modules, VGA graphics output, and USB mouse input through an SPI interface.
+                        Developed hardware-accelerated sprite rendering, collision detection, and game logic while utilizing BRAM storage and an LFSR-based
+                        randomization system.
+                    </Typography>
+                    <br></br>
+                    <GitHubIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
+                    <Link href="https://github.com/mayaashok/mayaashok.github.io/tree/main" color="success.main" sx={{ fontSize: '0.9rem'}}>Code</Link>
+                    <br></br>
+                    <DescriptionRoundedIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></DescriptionRoundedIcon>
+                    <Link href={report385} color="success.main" sx={{ fontSize: '0.9rem'}}>Final Report</Link>
+                </CardContent>
+            </Collapse>
+        </Card>
+
+        <Card sx={{ width: '100%', maxWidth: 700 }}>
+            <CardHeader 
                 avatar={ <SensorsIcon aria-label="sensor"></SensorsIcon>}
-                title="UIUC First-Year Design Laboratory (ECE 198) Semester Project"
+                title="UIUC ECE 198: Autonomous Obstacle-Avoiding Robot - EchoNav"
                 sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
                 action={
                     <ExpandMore expand={!!expanded[5]} onClick={()=>handleExpandClick(5)} aria-expanded={!!expanded[5]} aria-label="show more">
@@ -257,12 +232,13 @@ function Projects() {
                 }
             />
             <Collapse in={!!expanded[5]} timeout="auto" unmountOnExit>
-                <CardMedia sx={{ width: 330, height: 200, margin: "0 auto", display: "block" }} image={robot} title="echo nav"/>
+                <CardMedia sx={{ width: 297, height: 180, margin: "0 auto", display: "block" }} image={robot} title="echo nav"/>
                 <CardContent>
-                    <Typography gutterBottom variant="h7" component="div">Autonomous Robot: EchoNav</Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        For our James Scholar Honors Lab project, my group and I designed an autonmous robot that can traverse a room using
-                        ultrasonic sensors, a finite state machine, and wheel motors.
+                        Designed and built a miniature autonomous vehicle capable of navigating a room perimeter using ultrasonic sensing and
+                        finite-state-machine-basedcontrol. Developed custom sensor interface circuitry, digital logic for decision-making, and
+                        motor control hardware using discrete electronic components. The project provided hands-on experience with embedded systems,
+                        electronics debugging, control logic, and test instrumentation.
                     </Typography>
                     <br></br>
                     <DescriptionRoundedIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></DescriptionRoundedIcon>
@@ -285,7 +261,7 @@ function Projects() {
             />
             <CardHeader 
                 avatar={ <Avatar src={weceLogo} alt="WECE logo" sx={{ height: 30, borderRadius: 0}}/>}
-                title="WECE Website Chair / WECEHacks & EOH Software Team (2023-25)"
+                title="Women in Electrical and Computer Engineering (WECE)"
                 sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
                 action={
                     <ExpandMore expand={!!expanded[6]} onClick={()=>handleExpandClick(6)} aria-expanded={!!expanded[6]} aria-label="show more">
@@ -294,24 +270,18 @@ function Projects() {
                 }
             />
             <Collapse in={!!expanded[6]} timeout="auto" unmountOnExit>
-                <CardMedia sx={{ width: 380, height: 200, margin: "0 auto", display: "block" }} image={wece} title="solar flower power eoh"/>
+                {/* <CardMedia sx={{ width: 380, height: 200, margin: "0 auto", display: "block" }} image={wece} title="solar flower power eoh"/> */}
                 <CardContent>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        As the Website Chair for the WECE Infastructure Committee, I developed and maintained the official WECE website
-                        utilizing React, Next JS, Vercel, and MongoDB. Additionally as a member of the committee, I led monthly workshops
-                        teaching full-stack web development to students. For WECE's 2024 hackathon, I was on the software team where
-                        I helped build the official website with interactive games using HTML, CSS, and Javascript. For WECE's 2023-24
-                        EOH Project Solar Flower Power, I was also on the software team where I contributed to coding the IOS mobile app
-                        to control solar panel direction and power monitoring using Flutter in Dart.
+                        Served as 2024-25 Website Chair for the Infrastructure Committee, developing and maintaining the organization's website using
+                        React, Next.js, MongoDB, and Vercel. Contributed to 2023-24 software projects including an interactive hackathon website built
+                        with HTML, CSS, and JavaScript, and a Flutter-based mobile application for monitoring and controlling a solar-powered
+                        engineering project. Led monthly workshops introducing students to full-stack web development concepts.
                     </Typography>
                     <br></br>
-                    <ComputerRoundedIcon aria-label="code" color="secondary" sx={{ fontSize: '1.3rem', mr: 0.8 }}></ComputerRoundedIcon>
-                    <Link href="https://wece.ece.illinois.edu/" color="secondary.dark" sx={{ fontSize: '0.9rem', mr: 1.8}}>WECE Website</Link>
                     <GitHubIcon aria-label="code" color="secondary" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
                     <Link href="https://github.com/uiuc-wece/wece-next-app" color="secondary.dark" sx={{ fontSize: '0.9rem'}}>WECE Website Code</Link>
                     <br></br>
-                    <ComputerRoundedIcon aria-label="code" color="secondary" sx={{ fontSize: '1.3rem', mr: 0.8 }}></ComputerRoundedIcon>
-                    <Link href="https://amaigabichan.github.io/wecehacks-24/" color="secondary.dark" sx={{ fontSize: '0.9rem', mr: 1.8}}>2024 WECE Hackathon Website</Link>
                     <GitHubIcon aria-label="code" color="secondary" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
                     <Link href="https://github.com/amaigabichan/wecehacks-24" color="secondary.dark" sx={{ fontSize: '0.9rem'}}>2024 WECE Hackathon Website Code</Link>
                     <br></br>
@@ -320,28 +290,28 @@ function Projects() {
                 </CardContent>
             </Collapse>
             <CardHeader 
-                avatar={ <Avatar src={wcsLogo} alt="WCS logo" sx={{ height: 30, width: 120, borderRadius: 0}}/>}
-                title="WCS Technical Resources Facilitator, Girls Who Code Volunteer (2023-24)"
+                avatar={ <Avatar src={idcLogo} alt="IDC logo" sx={{ height: 30, borderRadius: 0}}/>}
+                title="Illinois Design Challenge (IDC)"
                 sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
                 action={
-                    <ExpandMore expand={!!expanded[7]} onClick={()=>handleExpandClick(7)} aria-expanded={!!expanded[7]} aria-label="show more">
+                    <ExpandMore expand={!!expanded[10]} onClick={()=>handleExpandClick(10)} aria-expanded={!!expanded[10]} aria-label="show more">
                         <ExpandMoreIcon/>
                     </ExpandMore>
                 }
             />
-            <Collapse in={!!expanded[7]} timeout="auto" unmountOnExit>
-                <CardMedia sx={{ width: 290, height: 200, margin: "0 auto", display: "block" }} image={wcs} title="wcs leadership"/>
+            <Collapse in={!!expanded[10]} timeout="auto" unmountOnExit>
+                {/* <CardMedia sx={{ width: 290, height: 200, margin: "0 auto", display: "block" }} image={idc} title="idc leadership"/> */}
                 <CardContent>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        As a member of WCS Technical Resources Subteam of the Explorations Commitee in 2023-24, I led monthly workshops teaching
-                        AI, Python, and Web Dev basics to college and high school students. Additionally, I volunteered in 2024 to assist in weekly
-                        Python and Scratch coding lessons for elementary school girls in Girls Who Code.
+                        Developed digital platforms supporting a three-day CAD-focused product design competition. Collaborated on the
+                        design and implementation of the official competition website, helping support a significant increase in participant
+                        engagement and event scale.
                     </Typography>
                 </CardContent>
             </Collapse>
             <CardHeader 
-                avatar={ <Avatar src={idcLogo} alt="IDC logo" sx={{ height: 30, borderRadius: 0}}/>}
-                title="IDC Infrastructure Coordinator (2024-25)"
+                avatar={ <Avatar src={irisLogo} alt="IRIS logo" sx={{ height: 30, borderRadius: 0}}/>}
+                title="Illinois Robotics in Space (IRIS)"
                 sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
                 action={
                     <ExpandMore expand={!!expanded[8]} onClick={()=>handleExpandClick(8)} aria-expanded={!!expanded[8]} aria-label="show more">
@@ -350,25 +320,16 @@ function Projects() {
                 }
             />
             <Collapse in={!!expanded[8]} timeout="auto" unmountOnExit>
-                <CardMedia sx={{ width: 290, height: 200, margin: "0 auto", display: "block" }} image={idc} title="idc leadership"/>
                 <CardContent>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        As a member of the IDC Infrastructure Team, I was responsible for creating digital platforms for promoting
-                        and hosting a 3-day CAD product design competition. I worked with a partner to develop the official IDC website 
-                        hosted for 70+ competition teams, which was a 300% increase in participation and engagement from previous years.
+                        Participated on the 2024-25 autonomy team for the Lunar Autonomy Challenge (LAC), a robotics competition focused on autonomous lunar exploration.
+                        Worked with Python and OpenCV to investigate image denoising techniques for lunar imagery.
                     </Typography>
-                    <br></br>
-                    <ComputerRoundedIcon aria-label="code" color="secondary" sx={{ fontSize: '1.3rem', mr: 0.8 }}></ComputerRoundedIcon>
-                    <Link href="https://www.illinoisdesignchallenge.com/" color="secondary.dark" sx={{ fontSize: '0.9rem'}}>IDC Website</Link>
                 </CardContent>
             </Collapse>
-        </Card>
-
-
-        <Card sx={{ width: '100%', maxWidth: 700 }}>
             <CardHeader 
-                avatar={ <MonitorHeartOutlinedIcon aria-label="health monitor"></MonitorHeartOutlinedIcon>}
-                title="Inspirit AI Scholars Project"
+                avatar={ <Avatar src={gwcLogo} alt="WCS logo" sx={{ height: 30, width: 55, borderRadius: 0}}/>}
+                title="Girls Who Code (GWC) / Women in Computer Science (WCS)"
                 sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
                 action={
                     <ExpandMore expand={!!expanded[9]} onClick={()=>handleExpandClick(9)} aria-expanded={!!expanded[9]} aria-label="show more">
@@ -377,13 +338,54 @@ function Projects() {
                 }
             />
             <Collapse in={!!expanded[9]} timeout="auto" unmountOnExit>
+                {/* <CardMedia sx={{ width: 290, height: 200, margin: "0 auto", display: "block" }} image={wcs} title="wcs leadership"/> */}
+                <CardContent>
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                        Contributed to the 2023-24 Technical Resources subteam within the Explorations Committee, developing and leading workshops
+                        on Python, web development, and introductory AI topics for college and high school students. Volunteered with 2024-25 GWC
+                        to support weekly programming lessons in Python and Scratch for elementary school students.
+                    </Typography>
+                </CardContent>
+            </Collapse>
+            <CardHeader 
+                avatar={ <Avatar src={evLogo} alt="EV logo" sx={{ height: 38, borderRadius: 0}}/>}
+                title="Illini Electric Vehicle (EV) Concept"
+                sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
+                action={
+                    <ExpandMore expand={!!expanded[7]} onClick={()=>handleExpandClick(7)} aria-expanded={!!expanded[7]} aria-label="show more">
+                        <ExpandMoreIcon/>
+                    </ExpandMore>
+                }
+            />
+            <Collapse in={!!expanded[7]} timeout="auto" unmountOnExit>
+                <CardContent>
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                        Contributed to the 2023-24 embedded systems subteam for a student-built energy-efficient electric vehicle competing in the Shell
+                        Eco-marathon. Explored current and voltage sensing solutions and STM32-based development for a joulemeter project.
+                    </Typography>
+                </CardContent>
+            </Collapse>
+        </Card>
+
+
+        <Card sx={{ width: '100%', maxWidth: 700 }}>
+            <CardHeader 
+                avatar={ <MonitorHeartOutlinedIcon aria-label="health monitor"></MonitorHeartOutlinedIcon>}
+                title="Inspirit AI Scholars: Pneumonia Detection with Deep Learning"
+                sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
+                action={
+                    <ExpandMore expand={!!expanded[11]} onClick={()=>handleExpandClick(11)} aria-expanded={!!expanded[11]} aria-label="show more">
+                        <ExpandMoreIcon/>
+                    </ExpandMore>
+                }
+            />
+            <Collapse in={!!expanded[11]} timeout="auto" unmountOnExit>
                 <CardMedia sx={{ height: 200, backgroundColor: "#263238" }} component="video" src={inspiritVid} title="ai pneumonia detector demo video" controls/>   
                 <CardContent>
-                    <Typography gutterBottom variant="h7" component="div">Pneumonia Detector</Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        As a part of the program, I worked in a team under a mentor to learn about different AI concepts
-                        and use our knowledge to program an pneumonia detector in Python using convolutional neural networks
-                        on X-ray data. The video to the right shows our pneumonia detection app deployed with a Flask backend and HTML frontend.
+                        Developed a pneumonia detection application using convolutional neural networks trained on chest X-ray imagery. Collaborated within a mentored
+                        team environment to explore machine learning concepts and deploy the final model through a Flask backend and web-based interface. The project
+                        introduced practical workflows for computer vision and deep learning applications.
                     </Typography>
                     <br></br>
                     <DescriptionRoundedIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></DescriptionRoundedIcon>
@@ -395,21 +397,21 @@ function Projects() {
         <Card sx={{ width: '100%', maxWidth: 700 }}>
             <CardHeader 
                 avatar={ <PrecisionManufacturingOutlinedIcon aria-label="robotics"></PrecisionManufacturingOutlinedIcon>}
-                title="UC Davis COSMOS Project"
+                title="UC Davis COSMOS: Robotics & Biophysics Research Projects"
                 sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
                 action={
-                    <ExpandMore expand={!!expanded[10]} onClick={()=>handleExpandClick(10)} aria-expanded={!!expanded[10]} aria-label="show more">
+                    <ExpandMore expand={!!expanded[12]} onClick={()=>handleExpandClick(12)} aria-expanded={!!expanded[12]} aria-label="show more">
                         <ExpandMoreIcon/>
                     </ExpandMore>
                 }
             />
-            <Collapse in={!!expanded[10]} timeout="auto" unmountOnExit>
+            <Collapse in={!!expanded[12]} timeout="auto" unmountOnExit>
                 <CardContent>
-                    <Typography gutterBottom variant="h7" component="div">Computers in Biophysics & Robotics Cluster</Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        As a part of the cluster, I worked on two projects. The first was designing, building, and programming
-                        a LegoMindstorm Robot with ultrasonic sensors in RobotC to detect and pick up objects. The second was programming an algorithm in Python to analyze
-                        steps and random walker movement of objects in 2D shapes.
+                        Completed robotics and computational modeling projects through the UC Davis COSMOS Robotics & Biophysics program. Designed and
+                        programmed a Lego Mindstorms robot capable of detecting and retrieving objects using ultrasonic sensing, and developed Python-based
+                        simulations to analyze random walker behavior in two-dimensional environments. These projects introduced foundational concepts in robotics,
+                        sensing, and scientific computing
                     </Typography>
                     <br></br>
                     <ComputerRoundedIcon aria-label="code" color="success" sx={{ fontSize: '1.3rem', mr: 0.8 }}></ComputerRoundedIcon>
@@ -425,37 +427,7 @@ function Projects() {
                     <Link href="https://www.youtube.com/embed/7Z8WzSwCETs" color="success.main" sx={{ fontSize: '0.9rem'}}>Robotics Project Demo</Link>
                 </CardContent>
             </Collapse>
-        </Card>
-
-        <Card sx={{ width: '100%', maxWidth: 700 }}>
-            <CardHeader 
-                avatar={<Avatar src={pilotCity} alt="pilotcity logo" sx={{ height: 30, width: 25, borderRadius: 0}}/>}
-                title="PilotCity Software Intern"
-                sx={{ textAlign: "left", "& .MuiCardHeader-content": { textAlign: "left",},}}
-                action={
-                    <ExpandMore expand={!!expanded[11]} onClick={()=>handleExpandClick(11)} aria-expanded={!!expanded[11]} aria-label="show more">
-                        <ExpandMoreIcon/>
-                    </ExpandMore>
-                }
-            />
-            <Collapse in={!!expanded[11]} timeout="auto" unmountOnExit>
-                <CardMedia sx={{ width: 290, height: 200, margin: "0 auto", display: "block" }} image={figma} title="blog post website figma"/>
-                <CardContent>
-                    <Typography gutterBottom variant="h7" component="div">Blog Post & Email Template Websites</Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        As a part of the software intern team, I worked on programming a blog post website in HTML, CSS, Javascript, and React using
-                        the NoSQL Firebase database. Additionally, I worked on designing and programming an email template creation page
-                        for the company's Project Development Kit for future fellows.
-                    </Typography>
-                    <br></br>
-                    <GitHubIcon aria-label="code" color="secondary" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
-                    <Link href="https://github.com/mayaashok/PilotCity-Website" color="secondary.dark" sx={{ fontSize: '0.9rem'}}>Blog Post Website Code</Link>
-                    <br></br>
-                    <GitHubIcon aria-label="code" color="secondary" sx={{ fontSize: '1.3rem', mr: 0.8 }}></GitHubIcon>
-                    <Link href="https://github.com/mayaashok/PDK-ClientEmails" color="secondary.dark" sx={{ fontSize: '0.9rem'}}>Email Template Code</Link>
-                </CardContent>
-            </Collapse>
-        </Card>    
+        </Card>  
 
     </div>  
   );

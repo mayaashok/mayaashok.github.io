@@ -14,3 +14,14 @@
     font-weight: 300;
 }
 
+.nav-icon-link {
+    display: flex;
+    padding-left: 5px;
+    align-items: center;
+    transition: opacity 0.2s ease-in-out;
+}
+  
+.nav-icon-link:hover {
+    opacity: 0.7; 
+}
+
