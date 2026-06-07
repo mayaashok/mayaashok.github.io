@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bbf8439c.css",
-    "main.js": "/static/js/main.685b45f4.js",
+    "main.css": "/static/css/main.dcc2dd94.css",
+    "main.js": "/static/js/main.ab887f19.js",
     "static/js/453.195b869a.chunk.js": "/static/js/453.195b869a.chunk.js",
     "static/media/demo198.mp4": "/static/media/demo198.055c35190b0df2949ec3.mp4",
     "static/media/ncsa.jpg": "/static/media/ncsa.da8e2e0944b952230ed6.jpg",
@@ -9,12 +9,10 @@
     "static/media/demo385.mp4": "/static/media/demo385.8b2c4f554554bbcef9bd.mp4",
     "static/media/journal198.pdf": "/static/media/journal198.ff13e207a9c8b47c71bf.pdf",
     "static/media/inspiritSlides.pdf": "/static/media/inspiritSlides.74163393d0756058a7d8.pdf",
-    "static/media/swe.png": "/static/media/swe.6411d2bc0fd6f4d9d114.png",
-    "static/media/embedded.png": "/static/media/embedded.9edc6a68171aea9feb51.png",
-    "static/media/general.png": "/static/media/general.f9f8b1fa1c30083f14b4.png",
+    "static/media/gm-photo.jpeg": "/static/media/gm-photo.d95d1a46ffa3ef5127cc.jpeg",
+    "static/media/Resume.png": "/static/media/Resume.055cd80b1717f0972be8.png",
     "static/media/weceEOH.png": "/static/media/weceEOH.63274456765153a8d09c.png",
     "static/media/report198.pdf": "/static/media/report198.244d777c1caa914ec247.pdf",
-    "static/media/gui.mp4": "/static/media/gui.7ac1081ecad12438f415.mp4",
     "static/media/cosmosReport.pdf": "/static/media/cosmosReport.2eaf550f65341d622045.pdf",
     "static/media/wcsTeam.png": "/static/media/wcsTeam.3bd91009a06bed536e57.png",
     "static/media/report441.pdf": "/static/media/report441.b9daf877e4403a4d6f3e.pdf",
@@ -24,14 +22,21 @@
     "static/media/pneumonia.mp4": "/static/media/pneumonia.7e2e0d2d69ae4ab92fdb.mp4",
     "static/media/plot441.png": "/static/media/plot441.b237c8dcd6a8fe70d008.png",
     "static/media/figma.png": "/static/media/figma.048a41b25e4d828e59c3.png",
+    "static/media/rank438.png": "/static/media/rank438.758bf287f491bfa1b5b1.png",
+    "static/media/iris-logo.png": "/static/media/iris-logo.bb128b243d359a73fa64.png",
+    "static/media/ev-logo.png": "/static/media/ev-logo.fe8217fbc8705bc36ff5.png",
+    "static/media/ece-logo.png": "/static/media/ece-logo.b7a0c997a885b362099d.png",
+    "static/media/ncsa-logo.png": "/static/media/ncsa-logo.def48466da3e2aa728f2.png",
+    "static/media/gwc-logo.png": "/static/media/gwc-logo.2f6d2680de468d18f58b.png",
+    "static/media/gm-logo.png": "/static/media/gm-logo.02c497bdc71951fc139b.png",
     "static/media/mlogo.svg": "/static/media/mlogo.c1bebc4eff9ee2916582bc8f82ee935d.svg",
     "index.html": "/index.html",
-    "main.bbf8439c.css.map": "/static/css/main.bbf8439c.css.map",
-    "main.685b45f4.js.map": "/static/js/main.685b45f4.js.map",
+    "main.dcc2dd94.css.map": "/static/css/main.dcc2dd94.css.map",
+    "main.ab887f19.js.map": "/static/js/main.ab887f19.js.map",
     "453.195b869a.chunk.js.map": "/static/js/453.195b869a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbf8439c.css",
-    "static/js/main.685b45f4.js"
+    "static/css/main.dcc2dd94.css",
+    "static/js/main.ab887f19.js"
   ]
 }
