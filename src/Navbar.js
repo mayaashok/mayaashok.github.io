@@ -24,7 +24,7 @@ function CollapsibleExample() {
             {/* <Nav.Link as={Link} to="/aboutme">- ABOUT ME -</Nav.Link> */}
             <Nav.Link as={Link} to="/work">- WORK -</Nav.Link>
             <Nav.Link as={Link} to="/projects">- PROJECTS -</Nav.Link>
-            <Nav.Link as={Link} to="/resume">- RESUME -</Nav.Link>
+            {/* <Nav.Link as={Link} to="/resume">- RESUME -</Nav.Link> */}
             <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start gap-3 mx-auto mx-lg-0 ms-lg-3 mt-3 mt-lg-0">
               <a 
                 href="https://github.com/mayaashok" 
