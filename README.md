@@ -37,5 +37,3 @@ branch of the repo.
 ### `git push origin main`
 
 Commits new changes made to main branch.
-
-<a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by wanicon - Flaticon</a>
