@@ -1,0 +1,175 @@
+.page {
+    padding-top: 0px;
+    gap: 5px;
+}
+
+#work, #projects { scroll-margin-top: 80px; }
+
+.xp-list {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+.xp-entry {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 32px;
+  align-items: center;
+  text-align: left;
+}
+
+.xp-media { min-width: 0; }
+
+.xp-text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.xp-company {
+  margin: 0;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #55695f;
+}
+
+.xp-role {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: #16221d;
+}
+
+.xp-desc {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #16221d;
+}
+
+.xp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.xp-chips li {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #ddefe4;
+  color: #1f6b4f;
+}
+
+/* phones: stack graphic on top, text below */
+@media (max-width: 760px) {
+  .xp-entry { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* ---------- other experience: smaller cards, graphic on top ---------- */
+.xp-other {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid #cfe2d7;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+/* one compact row per experience: small graphic left, text right */
+.xp-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.xp-row + .xp-row {
+  padding-top: 20px;
+  border-top: 1px solid #cfe2d7;
+}
+
+.xp-row-media {
+  flex: 0 0 240px;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.xp-row-media > * {
+  width: 100%;
+  height: 100%;
+}
+
+.xp-row-media img {
+  object-fit: cover;
+  display: block;
+}
+
+.xp-row-text {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 80ch;
+}
+
+.xp-row-text h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #16221d;
+}
+
+.xp-row-text h3 span { font-weight: 400; color: #55695f; }
+
+.xp-row-text p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #55695f;
+  max-width: 100ch;
+}
+
+.xp-chips.small li {
+  font-size: 0.7rem;
+  padding: 3px 9px;
+  background: transparent;
+  border: 1px solid #cfe2d7;
+  color: #55695f;
+}
+
+/* phones: shrink the row graphic but keep it beside the text */
+@media (max-width: 520px) {
+  .xp-row-media { flex-basis: 140px; }
+}
+
+/* GitHub / award links, first in a project's chip row */
+.xp-chips li.xp-link {
+  padding: 0;
+  border: none;
+  background: transparent;
+  display: flex;
+}
+
+.xp-link a {
+  display: flex;
+  align-items: center;
+  font-size: 1.15rem;
+  color: #2f9a6e;
+  border-radius: 50%;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.xp-link a:hover { color: #1f6b4f; transform: scale(1.12); }
+.xp-link a:focus-visible { outline: 2px solid #2f9a6e; outline-offset: 2px; }

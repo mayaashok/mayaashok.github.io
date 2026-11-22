@@ -1,5 +1,4 @@
 # Running A React App Website
-<img height="60" alt="website" src="https://github.com/user-attachments/assets/fdf20c06-3fb0-4d03-87f4-99e5cabe42f9" />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

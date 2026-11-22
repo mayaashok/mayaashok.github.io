@@ -1,34 +1,34 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-import demo385 from './media/demo385.mp4';
-import report385 from './media/report385.pdf';
+import demo385 from '../media/demo385.mp4';
+import report385 from '../media/report385.pdf';
 
-import plot441 from './media/plot441.png';
-import report441 from './media/report441.pdf';
+import plot441 from '../media/plot441.png';
+import report441 from '../media/report441.pdf';
 
-import robot from './media/robot.png';
-import report198 from './media/report198.pdf';
-import journal198 from './media/journal198.pdf';
-import demo198 from './media/demo198.mp4';
+import robot from '../media/robot.png';
+import report198 from '../media/report198.pdf';
+import journal198 from '../media/journal198.pdf';
+import demo198 from '../media/demo198.mp4';
 
-import rank438 from './media/rank438.png';
+import rank438 from '../media/rank438.png';
 
-import weceLogo from './media/wece.png';
-import wece from './media/weceEOH.png';
-import wcsLogo from './media/wcs-logo.png';
-import wcs from './media/wcsTeam.png';
-import idcLogo from './media/idc-logo.jpeg';
-import idc from './media/idc.png';
-import evLogo from './media/ev-logo.png';
-import irisLogo from './media/iris-logo.png';
-import gwcLogo from './media/gwc-logo.png';
+import weceLogo from '../media/wece.png';
+import wece from '../media/weceEOH.png';
+import wcsLogo from '../media/wcs-logo.png';
+import wcs from '../media/wcsTeam.png';
+import idcLogo from '../media/idc-logo.jpeg';
+import idc from '../media/idc.png';
+import evLogo from '../media/ev-logo.png';
+import irisLogo from '../media/iris-logo.png';
+import gwcLogo from '../media/gwc-logo.png';
 
-import aiSlides from './media/inspiritSlides.pdf'
-import inspiritVid from './media/pneumonia.mp4';
+import aiSlides from '../media/inspiritSlides.pdf'
+import inspiritVid from '../media/pneumonia.mp4';
 
-import cosmosSlides from './media/cosmosSlides.pdf'
-import cosmosReport from './media/cosmosReport.pdf'
+import cosmosSlides from '../media/cosmosSlides.pdf'
+import cosmosReport from '../media/cosmosReport.pdf'
 
 
 import './Projects.css';

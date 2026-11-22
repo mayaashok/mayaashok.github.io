@@ -1,15 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import ncsaAward from './media/ncsa.jpg';
-import ncsaLogo from './media/ncsa-logo.png';
+import ncsaAward from '../media/ncsa.jpg';
+import ncsaLogo from '../media/ncsa-logo.png';
 
-import figma from './media/figma.png';
-import pilotCity from './media/pilotcity.jpeg';
+import figma from '../media/figma.png';
+import pilotCity from '../media/pilotcity.jpeg';
 
-import gmLogo from './media/gm-logo.png';
-import gmCenter from './media/gm-photo.jpeg';
+import gmLogo from '../media/gm-logo.png';
+import gmCenter from '../media/gm-photo.jpeg';
 
-import eceLogo from './media/ece-logo.png';
+import eceLogo from '../media/ece-logo.png';
 
 import './Work.css';
 import * as React from 'react';

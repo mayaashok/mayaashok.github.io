@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import resume from './media/Resume.png';
+import resume from '../media/Resume.png';
 
 
 function Resume() {
